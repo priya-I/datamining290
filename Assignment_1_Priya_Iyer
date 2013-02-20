@@ -1,0 +1,42 @@
+Assignment 1
+ 
+My Data Set: Film Locations in San Francisco
+Link: https://data.sfgov.org/Arts-Culture-and-Recreation-/Film-Locations-in-San-Francisco/yitu-d5am
+
+Q. 1 What are the types of data available to you? 
+As I browsed through many interesting websites containing data sets, I came across mainly two types of data, as Jim mentioned in 
+class the last time:
+1. Structured data
+2. Unstructured data
+Some of the structured datasets were the ones that had clearly defined columns and could be easily exported to a relational 
+database. 
+I have used one of them in this assignment.
+Specific examples: 
+Geospatial data about worldwide earthquakes in the past 7 days: 
+https://explore.data.gov/Geography-and-Environment/Worldwide-M1-Earthquakes-Past-7-Days/7tag-iwnu
+Film locations in SF : https://data.sfgov.org/Arts-Culture-and-Recreation-/Film-Locations-in-San-Francisco/yitu-d5am
+Nutrition Chart : https://explore.data.gov/Health-and-Nutrition/MyPyramid-Food-Raw-Data/b978-7txq
+
+Some of the unstructured datasets were the ones drawn out of surveys and questionnaires. They 	did not have a clear description 
+of the data they contained. One has to map them out to the relevant questions in the survey and then analyze the responses. Most 
+of these data sets are available on Pew Research Center's website 
+(http://pewinternet.org/Static-Pages/Data-Tools/Download-Data/Data-Sets.aspx).	
+
+Q. 2 For data sets: how many records are in the data set? 
+My dataset is about the locations in San Francisco where certain movies were shot. There are 890 records in the dataset.
+
+Q. 3 For API: what are the limits on fetching data? 
+- Not applicable since I am not using an API
+
+Q. 4 Provide an "interesting" record, explain its properties and why it is interesting 
+I don't have a specific record to point to because the data set as a whole is interesting because there are several locations 
+where multiple movies have been shot. I think it would be interesting to visualize this dataset on an SF map with a legend movie 
+names on the right. Clicking on any of the movies would highlight/circle a spot on the map. It will also help us plot all the 
+movie shooting locations on the map and help us visualize the most popular shooting locations for movies.
+
+Q. 5 What are 3 questions you could answer using your data? 
+1. Which is the most popular location in SF for movie shootings?
+2. Which production company has shot the most number of scenes in SF?
+3. Which is the year when most number of scenes had been shot in SF?
+
+
