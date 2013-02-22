@@ -14,9 +14,9 @@ class UniqueReview(MRJob):
             ###
             # TODO: for each word in the review, yield the correct key,value
             # pair:
-            # for word in ____:
-            #   yield [ ___ , ___ ]
-            ##/
+            for word in WORD_RE.findall(record['text']):
+               yield [ word.lower(), record['review_id'] ]
+            
 
     def count_reviews(self, word, review_ids):
         """Count the number of reviews a word has appeared in.  If it is a
@@ -26,9 +26,11 @@ class UniqueReview(MRJob):
         unique_reviews = set(review_ids)  # set() uniques an iterator
         ###
         # TODO: yield the correct pair when the desired condition is met:
-        # if ___:
-        #     yield [ ___ , ___ ]
-        ##/
+        
+        if len(unique_reviews)==1:
+            unique_review_id=iter(unique_reviews).next()
+            yield [unique_review_id,1]
+        
 
     def count_unique_words(self, review_id, unique_word_counts):
         """Output the number of unique words for a given review_id"""
@@ -36,13 +38,14 @@ class UniqueReview(MRJob):
         # TODO: summarize unique_word_counts and output the result
         # 
         ##/
+        yield [review_id,sum(unique_word_counts)]
 
     def aggregate_max(self, review_id, unique_word_count):
         """Group reviews/counts together by the MAX statistic."""
         ###
         # TODO: By yielding using the same keyword, all records will appear in
         # the same reducer:
-        # yield ["MAX", [ ___ , ___]]
+        yield ["MAX", [unique_word_count,review_id]]
         ##/
 
     def select_max(self, stat, count_review_ids):
@@ -54,6 +57,8 @@ class UniqueReview(MRJob):
         # number
         #
         #/
+        
+        yield["RESULT",max(count_review_ids)]
 
     def steps(self):
         """TODO: Document what you expect each mapper and reducer to produce:
@@ -67,3 +72,8 @@ class UniqueReview(MRJob):
 
 if __name__ == '__main__':
     UniqueReview.run()
+
+'''
+"RESULT"    [109, "TozgRX8RAFPT1xMDLUqd9A"]
+    
+'''
