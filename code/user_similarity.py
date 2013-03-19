@@ -29,7 +29,7 @@ class UserSimilarity(MRJob):
             user2=tuple[1][0]
             business1=set(tuple[0][1])
             business2=set(tuple[1][1])
-            jvalue=len(business1.intersection(business2))/len(business1.union(business2))
+            jvalue=float(len(business1.intersection(business2)))/float(len(business1.union(business2)))
             if(jvalue>=0.5):
                 yield[user1,user2]
          
