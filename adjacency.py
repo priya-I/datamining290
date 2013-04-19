@@ -9,7 +9,7 @@ DG.add_edges_from([(5,11),(3,8),(3,10),(8,9),(7,8),(7,11),(11,2),(11,9),(11,10)]
 nx.write_adjlist(DG,"list")
 result=nx.adjacency_matrix(DG)
 print "***Adjacency List for Graph 1***"
-for line in nx.generate_adjlist(DG)
+for line in nx.generate_adjlist(DG):
 	print line
 
 print "\n***Adjacency Matrix for Graph 1***"
