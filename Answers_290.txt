@@ -1,0 +1,9 @@
+Question about skews:
+
+1. The mean and the median got interchanged in the skew graphs. In case of positive skew, the median is to the right of the mean. In case of the negative skew, the median is to the left of the mean.
+
+
+Question about training of the algorithm:
+
+2. I am not sure how I went wrong in that one. I would like to discuss this with the staff.
+
