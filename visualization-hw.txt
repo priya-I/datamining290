@@ -1,0 +1,3 @@
+I created this visualization for INFO 247 Information Visualization along with Seema using d3.js and the same dataset as Data Mining. Please find our visualization at: 
+
+http://priya-i.github.io/visualize-ao
