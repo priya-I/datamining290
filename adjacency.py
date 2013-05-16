@@ -17,12 +17,16 @@ print result
 
 G=nx.Graph()
 G.add_nodes_from([1,2,3,4,5,6])
-G.add_edges_from([(1,2),(2,1),(1,5),(5,1),(2,3),(3,2),(2,5),(5,2),(3,4),(4,3),(4,5),(5,4),(4,6),(6,4)])
+# G.add_edges_from([(1,2),(2,1),(1,5),(5,1),(2,3),(3,2),(2,5),(5,2),(3,4),(4,3),(4,5),(5,4),(4,6),(6,4)])
+
+# G.add_edges_from([(1,2),(1,5),(2,3),(2,5),(4,3),(4,5),(4,6)])
+G.add_edges_from([(1,2),(1,5),(2,5),(2,3),(3,4),(4,5),(6,4)])
+
 
 print "***Adjacency List for Graph 2***"
-for line in nx.generate_adjlist(G):
-	print line
+for n, line in G.adjacency_iter():
+	print n, line.keys()
 
 print "\n***Adjacency Matrix for Graph 2***"
-result2=nx.adjacency_matrix(G)
+result2 =nx.adjacency_matrix(G)
 print result2
